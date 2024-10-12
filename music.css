@@ -1,0 +1,383 @@
+/*
+html
+{
+    min-height: 100vh;
+    min-width: 98vw;
+}*/
+
+body
+{
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(3, 18, 76), rgb(0, 0, 0));
+    margin: 0;
+    overflow: hidden;
+
+}
+
+.centering
+{
+    margin: auto;
+    /*margin-top: 5vh;*/
+    /*width: 45vw;*/
+}
+
+/*
+.container1
+{
+    display: flex;
+    justify-content: center;
+}
+
+h3
+{
+    margin: 0;
+    color: white;
+    position: relative;
+    top: 50px;
+}
+
+.musicS
+{
+    margin: 5px;
+    padding: 10px;
+    width: 400px;
+    position: static;
+    right: 17%;
+    top: 200px;
+}
+
+.sbox
+{
+    border-radius: 10px;
+    background-color: #00D95F;
+    transition: 0.2s;
+}
+
+.sbox:hover
+{
+    transform: scale(1.05);
+}
+
+.spot
+{
+    display: flex;
+    justify-content: center;
+}
+
+.ibox
+{
+    padding: 4px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #FFA04B , #E54671, #CF3B9D);
+    transition: 0.2s;
+}
+
+.ibox:hover
+{
+    transform: scale(1.05);
+}
+
+.insta
+{
+    display: flex;
+    justify-content: center;
+}
+
+a
+{
+    text-decoration: none;
+}*/
+
+.container2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+video
+{
+    background-color: rgb(22, 22, 22);
+    outline: none;
+}
+
+
+@media (min-width: 480px){
+    body
+    {
+        height: 100vh;
+    }
+    
+    /*
+    .sbox
+    {
+        width: 400px;
+        transition: none;
+    }
+
+    .sbox:hover
+    {
+        transform: none;
+    }
+
+    .ibox
+    {
+        width: 395px;
+        transition: none;
+    }
+
+    .ibox:hover
+    {
+        transform: none;
+    }*/
+
+    video
+    {
+        width: 360px;
+        height: 360px;
+        
+    }
+}
+
+@media (max-width: 479px){
+    body
+    {
+        height: 100vh;
+    }
+    
+    /*
+    .sbox
+    {
+        width: 400px;
+        transition: none;
+    }
+
+    .sbox:hover
+    {
+        transform: none;
+    }
+
+    .ibox
+    {
+        width: 395px;
+        transition: none;
+    }
+
+    .ibox:hover
+    {
+        transform: none;
+    }*/
+}
+
+@media (min-width: 280px) and (max-width: 470px){
+
+    /*
+    .sbox
+    {
+        width: 200px;
+        transition: none;
+    }
+
+    .sbox:hover
+    {
+        transform: none;
+    }
+
+    .ibox
+    {
+        width: 195px;
+        transition: none;
+    }
+
+    .ibox:hover
+    {
+        transform: none;
+    }*/
+
+    video
+    {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.navigation
+{
+    margin: 0;
+    position: fixed;
+    inset: 20px 0 20px 20px;
+    width: 85px;
+    background: rgb(0, 0, 0);
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #03017b 13px 10px 20px;
+    
+}
+
+.navigation.open
+{
+    width: 250px;
+}
+
+.navigation .menuToggle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 23px;
+    cursor: pointer;
+
+}
+
+.navigation .menuToggle::before
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(-8px);
+    transition: 0.5s;
+}
+
+.navigation.open .menuToggle::before
+{
+    transform: translateY(0px) rotate(45deg);
+}
+
+
+.navigation .menuToggle::after
+{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    transform: translateY(8px);
+    transition: 0.5s;
+    box-shadow: 0 -8px 0 #333;
+}
+
+.navigation.open .menuToggle::after
+{
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 0 #333;
+}
+
+.navigation ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.navigation ul li
+{
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    transition: 0.5s;
+}
+
+.navigation ul li.active
+{
+    transform: translateX(0px);
+}
+
+.navigation.open ul li.active
+{
+    transform: translateX(10px);
+}
+
+.navigation ul li a
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    text-align: center;
+}
+
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 55px;
+    height: 55px;
+    line-height: 60px;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-size: 1.75em;
+    color: #222;
+}
+
+.navigation ul li.active a .icon
+{
+    color: #fff;
+    background: var(--clr)
+}
+
+.navigation ul li a .icon::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    filter: blur(8px);
+    opacity: 0;
+    transition: 0.5s
+}
+
+.navigation ul li.active a .icon::before
+{
+    opacity: 1;
+}
+
+.navigation ul li a .text
+{
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    /*color: #333;*/
+    color: rgb(108, 108, 108);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.navigation.open ul li a .text
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+.navigation ul li.active a .text
+{
+    color: var(--clr);
+}
+
+@media (max-width: 700px){
+    .navigation.open
+    {
+        width: 530px;
+    }
+}
+/*create media create for menu*/
+/*fill entire screen for phone view*/
